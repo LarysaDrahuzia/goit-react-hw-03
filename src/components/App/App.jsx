@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import initialPersons from '../../persons.json';
-
+import { nanoid } from 'nanoid';
 import ContactList from '../ContactList/ContactList';
 import SearchBox from '../SearchBox/SearchBox';
 import ContactForm from '../ContactForm/ContactForm';
@@ -19,12 +19,11 @@ function App() {
   useEffect(() => {
     localStorage.setItem('persons', JSON.stringify(persons));
   }, [persons]);
-  localStorage.clear();
 
   const [filter, setFilter] = useState('');
 
   const addPerson = person => {
-    setPersons(prev => [...prev, person]);
+    setPersons(prev => [...prev, { ...person, id: nanoid() }]);
   };
 
   const deletePerson = personId => {

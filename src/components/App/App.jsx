@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem('persons', JSON.stringify(persons));
   }, [persons]);
+  localStorage.clear();
 
   const [filter, setFilter] = useState('');
 

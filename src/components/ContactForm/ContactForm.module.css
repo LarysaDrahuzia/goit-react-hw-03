@@ -8,6 +8,7 @@
   width: 100%;
   margin: 0 auto;
   border: 1px solid #aaa;
+  box-shadow: 5px 5px 5px #aaa;
 }
 .box {
   display: flex;
@@ -19,16 +20,25 @@
 
 .field {
   width: 400px;
+  height: 36px;
+  padding-left: 16px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px #aaa;
+  border: 1px solid #aaa;
 }
 .button {
   padding: 8px;
   margin-bottom: 16px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   background-color: #007bff;
   border-radius: 4px;
   border: none;
   color: #fff;
+}
+
+.button:hover {
+  background-color: #0066b3;
 }
 
 .error {

@@ -13,13 +13,13 @@ function App() {
     if (savedPersons !== null) {
       return JSON.parse(savedPersons);
     }
-
     return initialPersons;
   });
 
   useEffect(() => {
     localStorage.setItem('persons', JSON.stringify(persons));
   }, [persons]);
+  localStorage.clear();
 
   const [filter, setFilter] = useState('');
 

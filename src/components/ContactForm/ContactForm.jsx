@@ -33,18 +33,18 @@ const ContactForm = ({ addContact }) => {
       validationPhoneSchema={PhoneSchema}
       onSubmit={handleSubmit}
     >
-      <Form>
+      <Form className={css.form}>
         <div className={css.box}>
-          <label>Name</label>
+          <label className={css.label}>Name</label>
           <Field className={css.field} type="text" name="name" />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div className={css.box}>
-          <label>Number</label>
-          <Field className={css.field} type="tel" name="phone" />
-          <ErrorMessage className={css.error} name="phone" component="span" />
+          <label className={css.label}>Number</label>
+          <Field className={css.field} type="tel" name="number" />
+          <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-        <button className="css.button" type="submit">
+        <button className={css.button} type="submit">
           Add contact
         </button>
       </Form>
